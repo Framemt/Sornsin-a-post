@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: postease-app
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      # ผูกฐานข้อมูลและโฟลเดอร์รูปภาพออกมาระดับโฮสต์ ข้อมูลจะไม่หายเมื่ออัปเดตเวอร์ชัน
+      - ./poster.db:/app/app/poster.db
+      - ./uploads:/app/app/static/uploads
+    environment:
+      - PYTHONUNBUFFERED=1

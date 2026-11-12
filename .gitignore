@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+
+# Database files (keeps production secrets safe)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+app/poster.db
+
+# Executables & Binaries
+*.exe
+cloudflared.exe
+ngrok.exe
+
+# Logs
+*.log
+ngrok.log
+tunnel*.log
+
+# User uploaded media
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
